@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { useRouter } from 'next/router';
-
+import Header from "../../components/Header/Header";
 export default function Login() {
 
   const router = useRouter();
@@ -42,7 +43,9 @@ export default function Login() {
     
 
   return (
-    <div className="container">
+    <>
+      <Header/>
+      <div className="container">
       <div className="screen">
         <div className="screen__content">
           <form className="login" onSubmit={handleSubmit}>
@@ -81,5 +84,8 @@ export default function Login() {
         </div>
       </div>
     </div>
+    </>
   );
 }
+
+
