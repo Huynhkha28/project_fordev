@@ -1,11 +1,9 @@
 import React from "react"
-
-function LoginPage() {
+import Header from "../../components/Header/Header";
+export default function LoginPage() {
     return (
         <div>
-
+            <Header />
         </div>
     )
 }
-
-module.exports = LoginPage
