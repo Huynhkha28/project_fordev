@@ -74,7 +74,7 @@ export default function Header() {
                         <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: '26px' }} onClick={toggleCart} className='hover:cursor-pointer hover:opacity-70' />
                         {isOpen && CartWindow({ cartItems })}
                     </div>
-                    <div className="flex items-center justify-end ml-4 hidden">
+                    <div className="flex items-center justify-end ml-4">
                         <Link href="/signin">
                             <button className="bg-slate-900 h-10 w-20 text-white font-bold rounded-lg">
                                 Sign in
@@ -86,7 +86,7 @@ export default function Header() {
                             </button>
                         </Link>
                     </div>
-                    <div className="flex items-center justify-end ml-4">
+                    <div className="flex items-center justify-end ml-4 hidden">
                         <Image
                             src={"/../public/image/avatar.jpg"}
                             width={40}
