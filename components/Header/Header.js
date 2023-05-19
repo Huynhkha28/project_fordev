@@ -16,7 +16,7 @@ const CartWindow = ({ cartItems }) => {
                     (<div className='cart-items py-3'>
                         <p className='text-center text-lg text-gray-400'>Cart is empty</p>
                         <p className='text-center text-lg text-gray-400	'>Keep shopping now</p>
-                    </div>) : (
+                    </div>): (
                         <ul>
                             {cartItems.map((item) => (
                                 <li key={item.id}>{item.name}</li>
@@ -37,7 +37,8 @@ const CartWindow = ({ cartItems }) => {
         </div>
     )
 }
-export default function Header({title}) {
+
+export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [cartItems, addTocarts] = useState([]);
     const divClassesShoppingCart = `cart-shopping flex items-center justify-end ml-auto text-lg flex-row relative  ${isOpen ? "before:content-[''] before:absolute before:w-[20px] before:h-[20px] before:absolute before:top-[20px] before:right-[0] before:border-[10px] before:border-zinc-100 before:border-r-transparent before:border-l-transparent before:border-t-transparent" : ''
@@ -47,7 +48,7 @@ export default function Header({title}) {
     }
     return (
         <>
-            <header className="header bg-white fixed w-full shadow-md h-14 sm:h-16 md:h-20 items-center">
+            <header className="header bg-white fixed w-full shadow-md h-14 sm:h-16 md:h-20 items-center sticky top-0">
                 <div className="header-wrap max-w-screen-sm sm:max-w-screen-lg md:max-w-screen-xl flex flex-wrap items-center  mx-auto px-2 md:px-0 sm:px-5 pt-3 sm:pt-4 md:pt-5">
                     <Link href="../../" className="nav-link">
                         <div className="header-logo  item-center rounded-full">
@@ -69,7 +70,6 @@ export default function Header({title}) {
                             <a href={url} key={title} className="rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-bold text-base">{title}</a>
                         ))}
                     </nav>
-
                     <div className={divClassesShoppingCart}>
                         <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: '26px' }} onClick={toggleCart} className='hover:cursor-pointer hover:opacity-70' />
                         {isOpen && CartWindow({ cartItems })}
@@ -77,7 +77,7 @@ export default function Header({title}) {
                     <div className="flex items-center justify-end ml-4">
                         <Link href="/signin">
                             <button className="bg-slate-900 h-10 w-20 text-white font-bold rounded-lg">
-                                Sign in
+                                Sign Up
                             </button>
                         </Link>
                         <Link href='/login'>
