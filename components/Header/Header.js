@@ -16,7 +16,7 @@ const CartWindow = ({ cartItems }) => {
                     (<div className='cart-items py-3'>
                         <p className='text-center text-lg text-gray-400'>Cart is empty</p>
                         <p className='text-center text-lg text-gray-400	'>Keep shopping now</p>
-                    </div>) : (
+                    </div>): (
                         <ul>
                             {cartItems.map((item) => (
                                 <li key={item.id}>{item.name}</li>
@@ -37,6 +37,7 @@ const CartWindow = ({ cartItems }) => {
         </div>
     )
 }
+
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [cartItems, addTocarts] = useState([]);
