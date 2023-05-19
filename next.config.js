@@ -4,8 +4,11 @@ const nextConfig = {
 }
 module.exports = {
   images: {
-    domains: ['localhost', 'localhost:3000'],
+    domains: ['localhost', 'localhost:3001'],
   },
+  env: {
+    PORT: process.env.PORT,
+  }
 }
 
 module.exports = nextConfig
