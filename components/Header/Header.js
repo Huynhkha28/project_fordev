@@ -37,7 +37,7 @@ const CartWindow = ({ cartItems }) => {
         </div>
     )
 }
-export default function Header() {
+export default function Header({title}) {
     const [isOpen, setIsOpen] = useState(false);
     const [cartItems, addTocarts] = useState([]);
     const divClassesShoppingCart = `cart-shopping flex items-center justify-end ml-auto text-lg flex-row relative  ${isOpen ? "before:content-[''] before:absolute before:w-[20px] before:h-[20px] before:absolute before:top-[20px] before:right-[0] before:border-[10px] before:border-zinc-100 before:border-r-transparent before:border-l-transparent before:border-t-transparent" : ''
