@@ -7,4 +7,5 @@ let handleLoginFetch = (username, password) => {
         password: password
     })
 }
-module.exports = handleLoginFetch
+
+module.exports = handleLoginFetch;

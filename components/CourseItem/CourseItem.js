@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import  {useRouter}  from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -31,17 +31,16 @@ export default function CourseItem() {
 
     handle_getallcourse();
   }, []);
-   const handleClickToDetail = (id) => {
-      router.push('/detail/' + id);
-      console.log(id);
-   }
+  const handleClickToDetail = (id) => {
+    router.push('/detail/' + id);
+  }
   return (
     <>
       <div className="container flex justify-center items-center">
         <div className="w-9/12 flex row">
           {
             courseData.map((course) => (
-              <div className="container flex flex-col w-3/12 mx-2 p-2 border hover:shadow-md hover:border-gray-400 hover:cursor-pointer hover:bg-slate-100 rounded-[10px]" key={course.id} onClick={() => handleClickToDetail(course._id)}>
+              <div className="container flex flex-col w-3/12 mx-2 p-2 border hover:shadow-md hover:border-gray-400 hover:cursor-pointer hover:bg-slate-100 rounded-[10px]" key={course._id} onClick={() => handleClickToDetail(course._id)}>
                 <div className="h-[145px]">
                   <Image src={"/../public/image/2473048_8255_5.jpg"}
                     width={260} height={145} alt="Picture of the course" />
