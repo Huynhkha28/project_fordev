@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from 'react';
+// push seeson
+
 
 export default function CourseItem() {
   const [courseData, setCourseData] = useState([]);
@@ -14,7 +16,7 @@ export default function CourseItem() {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify()
+          body: JSON.stringify(   )
         });
         const data = await response.json();
         console.log('Response:', data);
@@ -39,8 +41,9 @@ export default function CourseItem() {
           <div className="container flex justify-center items-center">  
                {
               
-        courseData.map((course) => (
-        <div className="container mx-auto w-1/4 flex-1" key={course.id}>
+          courseData.map((course) => (
+            
+ <div className="container mx-auto w-1/4 flex-1" key={course.id}>
           <div>
             {/* Image */}
           </div>
@@ -58,10 +61,11 @@ export default function CourseItem() {
                 
           <div className="flex">
             <div className="flex-1">{course.duration}   </div>
-            <div className="flex-1">Buy now</div>
+            <div className="flex-1">Buy now    </div>
             <div className="flex-1">Add to cart</div>
           </div>
         </div>
+            
       ))}
               
           </div>

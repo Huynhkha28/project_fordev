@@ -61,14 +61,20 @@ export default function Header() {
                         </div>
                     </Link>
                     <nav className="flex sm:justify-center space-x-4 justify-items-start ml-5 ">
-                        {[
+                        { // when
+                          // where
+                    //how 
+                            [
                             ['Contact', '/contact'],
                             ['Rate', '/rate'],
                             ['Test', '/test'],
                             ['Support', '/support'],
-                        ].map(([title, url]) => (
-                            <a href={url} key={title} className="rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-bold text-base">{title}</a>
-                        ))}
+                        ].map(  ([title, url]  ) => (
+                            <a href={url} key={title} className="rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-bold text-base">{title}
+                            
+                            </a>
+                        ))
+                        }
                     </nav>
 
                     <div className={divClassesShoppingCart}>
